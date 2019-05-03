@@ -10,7 +10,8 @@
 		$body = $('body'),
 		$wrapper = $('#page-wrapper'),
 		$banner = $('#banner'),
-		$header = $('#header');
+		$header = $('#header'),
+		$iframe = $('#iframe');
 
 	// Breakpoints.
 		breakpoints({
@@ -29,16 +30,20 @@
 		});
 
 	// Mobile?
-		if (browser.mobile)
+		if (browser.mobile) {
 			$body.addClass('is-mobile');
+			$iframe.addClass('is-mobile')
+		}
 		else {
 
 			breakpoints.on('>medium', function() {
 				$body.removeClass('is-mobile');
+				$iframe.removeClass('is-mobile')
 			});
 
 			breakpoints.on('<=medium', function() {
 				$body.addClass('is-mobile');
+				$iframe.addClass('is-mobile')
 			});
 
 		}
