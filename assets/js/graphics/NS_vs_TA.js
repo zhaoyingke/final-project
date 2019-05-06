@@ -1,4 +1,4 @@
-import Chart from 'chart.js';
+import { Chart } from 'chart.js';
 var ctx = document.getElementById('scatterChart');
 var scatterChart = new Chart(ctx, {
     type: 'scatter',

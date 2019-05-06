@@ -3339,7 +3339,7 @@ input, select, textarea {
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background-image: url(../../images/banner.jpg);
+		background-color: #B25C43;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3989,22 +3989,28 @@ input, select, textarea {
 		background-color: #B25C43;
 	}
 /* video frame */
-iframe {
-	display: block;
-	margin: 0 0 2em 0;
-	width: 840px;
-	height: 472.5px;
-	margin: auto;
-	margin-block-end: 10px;
+.iframe-container {
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%;
+	height: 0;
 }
-iframe.is-moble {
+
+.iframe-container iframe{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* iframe.is-moble {
 	display: block;
 	margin: 0 0 2em 0;
 	width: 316.34px;
 	height: 177.94px;
 	margin: auto;
-	margin-block-end: 10px;
-}
+	margin-block-end: 10px; */
+/* } */
 
 /* graphics */
 body.canvas{
