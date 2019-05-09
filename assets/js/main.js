@@ -12,7 +12,27 @@
 		$banner = $('#banner'),
 		$header = $('#header'),
 		$iframe = $('#iframe');
+		// responsive square img
+		var textOverImages = document.getElementsByClassName("onClickTextOverImage");
+		var previousTextOverImage;
 
+	for (var i = 0; i < textOverImages.length; i++) {
+		textOverImages[i].onclick = function() {
+			var classes = this.classList;
+			if (classes.contains("show")) {
+			classes.remove("show");
+			} else {
+			if (previousTextOverImage != null)
+				previousTextOverImage.classList.remove("show");
+			previousTextOverImage = this;
+			classes.add("show");
+			}
+		}
+		}
+		
+		function stopPropagation(event){
+		event.stopPropagation();
+		}
 	// Breakpoints.
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
@@ -32,7 +52,7 @@
 	// Mobile?
 		if (browser.mobile) {
 			$body.addClass('is-mobile');
-			$iframe.addClass('is-mobile')
+			
 		}
 		else {
 
@@ -43,7 +63,7 @@
 
 			breakpoints.on('<=medium', function() {
 				$body.addClass('is-mobile');
-				$iframe.addClass('is-mobile')
+				
 			});
 
 		}

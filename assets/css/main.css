@@ -169,6 +169,10 @@ input, select, textarea {
 		line-height: 1em;
 		margin: 0 0 1em 0;
 		text-transform: uppercase;
+		font-weight: 400;
+		font-family: 'Open Sans';
+		src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v16/mem6YaGs126MiZpBA-UFUK0ddc1GAK6bt6o.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -177,8 +181,8 @@ input, select, textarea {
 		}
 
 	h2 {
-		font-size: 1.35em;
-		line-height: 1.75em;
+		font-size: 1.2em;
+		line-height: 1.55em;
 	}
 
 		@media screen and (max-width: 736px) {
@@ -192,7 +196,7 @@ input, select, textarea {
 
 	h3 {
 		font-size: 1.15em;
-		line-height: 1.75em;
+		line-height: 1.5em;
 	}
 
 		@media screen and (max-width: 736px) {
@@ -2111,7 +2115,50 @@ input, select, textarea {
 			.image.fit img {
 				width: 100%;
 			}
+/* Responsive Images		 */
 
+		.onClickTextOverImage{
+			width: 100%;
+			padding-bottom: 100%;
+			margin: 10% auto;
+			position: relative;
+			overflow: hidden;
+			background-size:cover;
+			display:inline-block;
+			border-radius:16px;
+			box-shadow:0 0 16px rgba(0,0,0,0.5);
+			cursor:pointer;
+		}
+		.onClickTextOverImage img{
+			position: absolute;
+  			height: 100%;
+		}
+		.onClickTextOverImage span{
+			position:absolute;
+			color:#fff;
+			padding:8px;
+			top:0;
+			bottom:0;
+			right:0;
+			left:0;
+			background-color:rgba(0,0,0,0.5);
+			border-radius:16px;
+			padding-top:35%;
+			text-align:center;
+			opacity:0;
+			visibility:hidden;
+			transition:.3s;
+		}
+		
+		.onClickTextOverImage.show span{
+			opacity:1;
+			padding-top:40%;
+			visibility:visible;
+		}
+/* canvas */
+canvas{
+	width: 100%
+}
 /* List */
 
 	ol {
@@ -2815,7 +2862,11 @@ input, select, textarea {
 			.wrapper.style1 blockquote {
 				border-color: rgba(0, 0, 0, 0.125);
 			}
-
+			.wrapper.style1 header.major blockquote {
+				color: #424B50;
+				font-size: 22px;
+				text-transform: none
+			}
 			.wrapper.style1 code {
 				background: rgba(255, 255, 255, 0.075);
 			}
@@ -2825,7 +2876,10 @@ input, select, textarea {
 				font-family: 'Lora', serif;
 				font-size: 18px;
 			}
-
+			.wrapper.style1 head.major p::selection{
+				color: #F3F8F2;
+				background-color: #415065
+			}
 			.wrapper.style1 header.major h2, .wrapper.style1 header.major h3, .wrapper.style1 header.major h4, .wrapper.style1 header.major h5, .wrapper.style1 header.major h6 {
 				border-color: rgba(0, 0, 0, 0.125);
 			}
@@ -2834,13 +2888,42 @@ input, select, textarea {
 				color: #424B50;
 				font-family: 'Lora', serif;
 				font-size: 18px;
+				letter-spacing: 1%;
+				text-align: justify
 			}
 
 			.wrapper.style1 header.major h2 {
 				color: #415065;
 				font-family: 'Gugi', cursive;
+				font-size: 24px
 			}
-
+			
+			.wrapper.style1 header.major h3 {
+				color: #415065;
+				text-transform: none;
+				font-size: 24px;
+				font-weight: 500;
+				letter-spacing: inherit;
+				font-family: 'open sans'
+			}
+			.wrapper.style1 header.major .firstcharacter{
+				color: #B25C43;
+				float: left;
+				font-family: 'open sans', sans-serif;
+				font-weight: 600;
+				font-size: 145px;
+				line-height: 100px;
+				padding-top: 4px;
+				padding-right: 8px;
+				padding-left: 3px;
+			}
+			.wrapper.style1 header.major .signature {
+				color: #B25C43;
+				font-family: 'Parisienne', cursive;
+				font-weight: 400;
+				padding-left: 30px;
+				font-size: 20px
+			}
 			.wrapper.style1 label {
 				color: #ffffff;
 			}
@@ -3454,6 +3537,9 @@ input, select, textarea {
 			line-height: inherit;
 			position: absolute;
 			top: 0;
+			font-size: 12px;
+			font-family: "Gugi", serif;
+			letter-spacing: 5%
 		}
 
 			#header h1 a {
@@ -3461,6 +3547,9 @@ input, select, textarea {
 				display: block;
 				height: inherit;
 				line-height: inherit;
+				font-size: 12px;
+				font-family: "Gugi", serif;
+				letter-spacing: 5%
 			}
 
 				@media screen and (max-width: 736px) {
@@ -3572,6 +3661,7 @@ input, select, textarea {
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+		color: white
 	}
 
 		#banner h2 {
@@ -3625,7 +3715,7 @@ input, select, textarea {
 		}
 
 			#banner p a {
-				color: inherit;
+				color: white;
 			}
 
 		#banner .more {
@@ -3900,6 +3990,7 @@ input, select, textarea {
 			list-style: none;
 			padding: 0;
 			text-transform: uppercase;
+			font-size: 8px
 		}
 
 			#footer .copyright li {
@@ -4003,14 +4094,7 @@ input, select, textarea {
 	width: 100%;
 	height: 100%;
 }
-/* iframe.is-moble {
-	display: block;
-	margin: 0 0 2em 0;
-	width: 316.34px;
-	height: 177.94px;
-	margin: auto;
-	margin-block-end: 10px; */
-/* } */
+
 
 /* graphics */
 body.canvas{
