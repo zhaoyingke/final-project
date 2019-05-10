@@ -2905,7 +2905,8 @@ canvas{
 			.wrapper.style1 header.major h2 {
 				color: #415065;
 				font-family: 'Gugi', cursive;
-				font-size: 24px
+				font-size: 24px;
+				padding-top: 0.5cm
 			}
 			
 			.wrapper.style1 header.major h3 {

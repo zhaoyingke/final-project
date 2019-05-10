@@ -20,8 +20,14 @@
 		<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
 		<!-- svg.js -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.12/svg.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.12/svg.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.12/svg.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.12/svg.min.js"></script> -->
+		<!-- share to social network -->
+		<meta property="og:url"           content="https://zhaoyingke.github.io/final-project" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="To Each Their Own Taste:" />
+		<meta property="og:description"   content="Different faces of Chinese food in Paris" />
+		<meta property="og:image"         content="https://zhaoyingke.github.io/final-project/images/share_icone.jpg" />
 		<script>
 			Chart.defaults.global.plugins.datalabels.display = false
 			var vm = new Vue({
@@ -86,9 +92,11 @@
 								<p class="source">Sources: Trip Advisor, New Savour, La Fourchette</p>
 								<p class="caption">The X aix represents a set of ramdon variables taken from the 42 restaurants compiled by all three platforms. The Y axis is the percentile of standardised restaurant rating, ranging from 0 to 1 (100%). The greater the value is thus the higher the curve is, the higher the restaurant's ranting is.</p>
 								
-								<p><br></p>
-							
-								<h2>A Hundred years of history</h2>
+								<canvas id="scatterChart" width="600" height="400"></canvas>
+								<p class="source">Sources: Trip Advisor, New Savour</p>
+								<p class="caption">Each dot represents a restaurant found on both New Savour and Trip Advisor. The X aix shows its rating percentile on New Savour, and y Axis that on Trip Advisor. Clearly the two sets of data do not follow any clear pattern, which means that restaurant ratings on each website do not prove to be statisticaly correlated to each other. In fact, the Pearson correlation coefficient of the given two datasets is estimated at around 5%, which means they almost don't fit in any linear model. This is another proof of our hypothesis that different customer segments may have contrasting preferences.
+									
+								<h2>A hundred years of history</h2>
 								<p><span class="firstcharacter">T</span>he first two Chinese restaurants in Paris date back to over a century ago, before World War I. By the break of World War II, around forty others opened their doors. Most of them were on the left bank, particularly in the Latin Quarter. Exotism wasn’t such a trend as it has become today. The clients were mostly Chinese, Japanese and Siamese (not many Asian states were independent at that time, in fact) and very few Europeans who’d travelled to the Far East.</p>
 								<p>It was not until the post-war era that massive numbers of immigrants from China and former French colonies in Southeastern Asia started to arrive in Paris and make a living running a restaurant. By the middle 1960s the Latin Quarter was saturated with Chinese -- or so were they branded -- restaurants, and restaurateurs began to expand their business to other neighbourhoods, both commercial and residential. In 1960 the Interior Ministry of France estimated the number of Chinese restaurants in the capital to be 97. In merely thirty years, it grew to 728, or nearly 1400 in the Greater Parisian Area, according to a census conducted by the Guide of the Chinese Community in 1991.</p>
 								<p>The concept of “Chinese cooking” was still ambiguous. Gastronomic traditions from a faraway land was unknown to the multitudes, and immigrants themselves were of different origins that most local French couldn’t distinguish. Tang Frères, one of the biggest Asian grocery chain stores in France, for example, was founded by two Laotian brothers of Chinese ancestry.</p>
@@ -208,12 +216,20 @@
 
 				<!-- Footer -->
 					<footer id="footer">
+						<div id="fb-root"></div>
+							<script>(function(d, s, id) {
+							  var js, fjs = d.getElementsByTagName(s)[0];
+							  if (d.getElementById(id)) return;
+							  js = d.createElement(s); js.id = id;
+							  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+							  fjs.parentNode.insertBefore(js, fjs);
+							}(document, 'script', 'facebook-jssdk'));</script>
 						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/yingke-zhao/" target="_blank"  class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://twitter.com/YingkeZ" target="_blank"  class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.facebook.com/no12307090047" target="_blank"  class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://zhaoyingke.github.io/final-project&amp;title=f1&url=http://zhaoyingke.github.io/final-project/images/share_icon&amp;summary=Check%20out%20this%20multimedia%20story%20about%20Chinese%20food%20in%20Paris!" target="_blank"  class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://twitter.com/share?url=https://zhaoyingke.github.io/final-project&amp;text=To%20each%20their%20own%20taste:%20different%20faces%20of%20Chinese%20food%20in%20Paris&amp;hashtags=Parisfood" target="_blank"  class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="http://www.facebook.com/sharer.php?u=https://zhaoyingke.github.io/final-project" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 							<li><a href="https://www.instagram.com/slf_zyk/" target="_blank"  class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="mailto:yingke.zhao@sciencespo.fr" target="_blank"  class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+							<li><a href="mailto:?Subject=Check out this article about Chinese food in Paris!&amp;Body=I%20saw%20this%20and%20thought%20this%20might%20interest%20you!%20 https://zhaoyingke.github.io/final-project"  class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
 							<li class="left">&copy; All rights reserved</li><li class="right">Page design made with <a href="http://html5up.net" target="_blank" >HTML5 UP</a> </br>Header illustration made with vectors from <a href="https://www.vecteezy.com/" target="_blank">VECTEEZY</a></li>
