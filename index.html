@@ -16,7 +16,12 @@
 		<script src="assets/js/vendors/vue.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 		<script src="https://unpkg.com/vue-chartjs/dist/vue-chartjs.min.js"></script>
-		
+		<!-- scrollmagic -->
+		<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
+		<!-- svg.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.12/svg.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.0.12/svg.min.js"></script>
 		<script>
 			Chart.defaults.global.plugins.datalabels.display = false
 			var vm = new Vue({
@@ -40,7 +45,8 @@
 										<ul>
 											<li><a href="index.html">Home</a></li>
 											<li><a href="https://zhaoyingke.github.io/myportfolio/index.html">About Me</a></li>
-											<li><a href="#">Acknowledgement</a></li>
+											<li><a href="https://zhaoyingke.github.io/myportfolio/english.html">More works</a></li>
+											<!-- <li><a href="acknowledgement.html">Acknowledgement</a></li> -->
 											<li><a href="mailto:yingke.zhao@sciencespo.fr">Contact</a></li>
 										</ul>
 									</div>
@@ -71,11 +77,14 @@
 								<p>Separate menus seem to have become a common business strategy among Chinese restaurateurs in Paris, as different customer segments usually have very divergent expectations for what “Chinese food” entails. “Almost half of our clientele is Chinese, and they want us to make the same food they eat back home”, explains Au Piment du Centre’s manager Li Xi. To address the French audience, who usually has a hard time accepting "bizarre" dishes but who still wishes to experience some exotism from time to time, Mr Li prefers an additional menu just for them instead of compromising their overall cooking quality. “We cannot just abandon the local customers so in certain ways we have to give in to some stereotypes”, he says, “but the Chinese community is a giant market we cannot ignore, so our dishes must first taste good to them”.</p>
 								<p>All the restaurants are not so ambitious as Mr Li’s to target the entire customer spectrum, and some choose to adapt to only certain segments of the market. The <i>traiteurs asiatiques</i>, or Asian takeouts, are a good example. Their well-known dishes like General Tso’s chicken or beef with broccoli may appear oriental enough to appeal to Westerners, but such fusion cannot cajole savvy Chinese foodies to bring their wallet out.</p>
 								<p>Customer reviews on restaurant rating websites also reflect how differently they think of and appreciate Chinese food, and the data collected from three Yelp-like rating websites prove restaurateurs’ strategies to be efficient. These three rating platform have quite divergent user demographics: New Savour, founded and used by the overseas Chinese community in Paris; La Fourchette, the local version of The Fork, a pan-European online booking site; and TripAdvisor, an all-in-one travelers’ guide with a global audience.</p>
-								<p>The first finding comes with no surprise: New Savour takes into account almost the same number of Chinese restaurants as the other two websites combined, even if it has a much smaller Chinese-speaking only audience compared to multilingual platforms. Despite the common tag “Chinese” applied on all three websites, users clearly have different visions for what this genre entails.</p>
-								<p>ADD CHART CAPTIONS</p>
+								<p>The first finding comes with no surprise: New Savour has almost the same number of Chinese restaurants as the other two websites combined, despite its much smaller Chinese-speaking only audience compared to the other two international platforms'.</p>
 								<canvas id="barChart_sample_size" width="600" height="400"></canvas>
+								<p class="source">Sources: Trip Advisor, New Savour, La Fourchette</p>
+								<p>The websites also have very heterogeneous restaurants. TripAdvisor has only 25% common restaurants with New Savour's database. Among more than 1200 different catering businesses taken into account, only 42 appear on all three platforms</p>
+								<p>Even more interestingly, the discrepancies in customer rating on different websites support the theory that each customer demographic group has different preferences. If we search a restaurant's customer reviews on any two plateforms -- given that it's included in both inventories -- four times out of ten will we end up being undecisive whether to go, because the discrepancies in rating and ranking are considerable.</p>
 								<canvas id="compareRatingPercentile" width="600" height="400"></canvas>
-								
+								<p class="source">Sources: Trip Advisor, New Savour, La Fourchette</p>
+								<p class="caption">The X aix represents a set of ramdon variables taken from the 42 restaurants compiled by all three platforms. The Y axis is the percentile of standardised restaurant rating, ranging from 0 to 1 (100%). The greater the value is thus the higher the curve is, the higher the restaurant's ranting is.</p>
 								
 								<p><br></p>
 							
@@ -88,35 +97,36 @@
 								<p>Such has been the case of Frederic Vitaux, a long-time sinophile and food lover, until he finally visited China for the first time in January 2019. Born in Normandy in Northern France, the 46-year-old man has been eating Chinese since his schooldays. In his kitchen, Frederic has everything needed for a descent homemade Chinese supper: various kinds of soy sauce, amber-coloured Shaoxing rice liquor, event a steam cooker.</p>
 								<p>But even a foodie like Frederic checks all the “stereotype boxes”. For a long time he would go to Asian diners for nem or Cantonese rice takeouts, as “those dishes taste good and are affordable for a student”.</p>
 								<div class="iframe-container">
-
-									<p>FREDDIE INTERVIEW CAPTION</p>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/0Z3F4_yquKY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 								</div>
 								<p>In recent years, however, a major game changer has come on the scene and is altering the landscape of the Chinese restaurant sector in Paris -- China’s burgeoning cultural influence and its people’s growing purchasing power. Middle-class tourists and students have replaced political refugees and war fugitives, and constitute now a considerable market that many restaurateurs like Mr Li Xi are trying to grip.</p>
 								<p>An essential criterion of these less price-sensitive clients is that the food should taste like home: China in the twenty-first century. Colossal changes are being made in the country’s catering sector -- from audaciously flavoured Sichuanese food to exquisite Cantonese dim sum and chic tea drinks -- things that “old overseas Chinese” restaurateurs generally know little about since they left China decades ago and that they are actually more devoted to the local clientele.</p>
 								<p>The challenge to maintain authenticity doesn’t become easier in an era of Internet and cross-border E-commerce, as flavours depend not only on ingredients, but also the climate where the food is made. Chef You now works in a Sichuanese bistro in the fifth Arrondissement in Paris. Back in China, he was a kitchen manager of a hotel restaurant, and supervised upon a dozen of cooks and their kitchen’s secret sauces and pickles. “Such sapours are simply impossible to reproduce in France, no matter what I try”, he laments, “The protected geographical designation does make a good point”. He refers to a special vegetarian fish-tasting flavour in Sichuanese cuisine called Yu Xiang that requires local pickled chilli pepper made with grain liquour and several fragrant herbs. In most Asian diners, this flavour is frequently replaced by lavish dose of vinegar and sugar. Another crucial ingredient, the fermented chilli bean sauce, also entitled as “soul of Sichuanese cuisine”, is more than often marked “made in Guangong (new spelling of Canton, nvdr), China” in Tang Frères and its competitor Paris Store.</p>
 								<p>Restaurant owners tend to be shy about the compromise they have to make because of lack of ingredients, but connoisseur customers’ acute taste buds can immediately tell if a meal is properly cooked. Wu Yurong and Mao Jingxi are both from Chongqing, one of the two hubs for Sichuanese cuisine. They became friends since college, and still keep the habit to grab dinner together regularly. While their food quest hasn't always been satisfactory, the two girls have grown “lenient” on Chinese restaurants in Paris, since even in Shanghai, where the two girls went to university together, “Sichuanese cuisine is modified to fit the local palate”.</p>
-								<div class="iframe-container"><p>MAOMAO LILI INTERVIEW</p></div>
-								</br>
+								<div class="iframe-container">
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/ufuarc50VTE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<p></p>
 								<h2>New image of Chinese food</h2>
 								<p><span class="firstcharacter">B</span>esides the true-or-fake dichotomy, a new school of Chinese food is emerging: the Franco-Chinese fusion, and not in a “sushi plus avocado and rice papr equals to Japanese-Peruvian-Vietnamese” kind of manner, which turns out to be surprisingly common in Paris. And instead of treating Chinese and French customers differently, some restaurateurs are looking for ways to organically combine two culinary traditions and offer acceptable food to a more cosmopolitan clientele.</p>
-								<p>Ms Xuan Yan and her husband are testing this new path in their restaurant Le Granite located in the fifteenth Arrondissement. Their slogan: the meeting of French cultural and chinese taste, reflected by the combination of trendy Sichuanese dishes and French wine. Ms Xuan keeps the venue’s decor intact just like they rented it four years ago. “This place used to be a two-star Michelin restaurant, and many celebrities have been here”, she says, pointing to photos of former Prime Minister of France Jean-Pierre Raffarin and late Colombian Nobel-winning writer Garcia Gabriel Marquez, “and I want to inherit its charm”.</p>
+								<p>Xuan Yan and her husband are testing this new path in their restaurant Le Granite located in the fifteenth Arrondissement. Their slogan: the meeting of French cultural and chinese taste, reflected by the combination of trendy Sichuanese dishes and French wine. Ms Xuan keeps the venue’s decor intact just like they rented it four years ago. “This place used to be a two-star Michelin restaurant, and many celebrities have been here”, she says, pointing to photos of former Prime Minister of France Jean-Pierre Raffarin and late Colombian Nobel-winning writer Garcia Gabriel Marquez, “and I want to inherit its charm”.</p>
 								<p>While this couple don’t have much experience running a restaurant, they clearly know what it takes to be a good cross-cultural communicator. Ms Xuan herself was chief representative of the Nordic Tourism Office in Beijing, and her husband worked as a diplomatic delegate for the Chinese government. When he was transferred to Paris on a mission, she decided to tag along and pursue her “romantic dreams about France every woman has”.</p>
 								<p>For a whole year she ran this place like a French bistro and learnt her hospitality management lessons in practice and deficit. They then decided to convert it into what they knew better and what the neighbourhood didn’t have: a chic but affordable Chinese restaurant. Now that Le Granite has a stable cash flow, Ms Xuan starts to devote herself into something else she’s always wanted to do: become a salon hostess. Each several weeks she gathers Chinese scholars and students in France and their French counterparts to exchange about a variety of topics: poetry, art and wine tasting, to name a few. “I’d like my restaurant to become a hub for great minds to meet at”, she adds.</p>
 								<p>Fully integrating to the local community can't be done with east, and to target a broader potential client group means stepping out the comfort zone, develop new menus and advertise on more platforms rather than merely on Chinese language websites. Growing numbers of Chinese restaurant pages on La Fourchette and Facebook is certainly a positive sign.</p>
 								<p>Despite this new tendency, though, Chinese cuisine still has a long way to go in its branding and image building process, as stereotypes won’t just disappear overnight. Ms Xuan remembers attending compulsory hygiene conferences before her restaurant kicked off. “Almost all the counterexample the Health Inspection Bureau showed us were Chinese restaurant. I can’t deny that they do exist, but it was shameful to watch with others.” Not long ago, in New York City, a white woman and her Chinese bistro “Lucky Lee’s” have been pushed to the cusp of public discussion after she publicised her  concept of “clean” Chinese food. It remains debatable if she truly meant to make a racist insult, but the incident demonstrates to which point Chinese cuisine still needs to deal with its image issues.</p>
 								<p>Chinese cuisine is certainly on an ascendant trend, after all, as China’s economic boom continues. Gastronomy is an emblematic part of what the country’s has to offer to world, because, just like how Ms Xuan thinks of her new career: “food is the best cultural diplomat”. <span class="signature"> ✾ Zhao Yingke</span></p>
-								<p>DON'T FORGET ABOUT THE QUIZ IF HAVE TIME</p>
-							</header>
-							<!-- <div class="col-lg-6 col-md-6 col-sm-12">
-								<div class="onClickTextOverImage" style="background-image:url(https://i.pinimg.com/originals/52/6f/f9/526ff9538a53a9899a4976b260f51ce5.jpg)">
-									<span>Ten Shin Don</span>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-sm-12">
+								<!-- <p>DON'T FORGET ABOUT THE QUIZ IF HAVE TIME</p> -->
+								<!-- <div class="col-lg-6 col-md-6 col-sm-12">
 									<div class="onClickTextOverImage" style="background-image:url(https://i.pinimg.com/originals/52/6f/f9/526ff9538a53a9899a4976b260f51ce5.jpg)">
 										<span>Ten Shin Don</span>
 									</div>
-							</div> -->
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-12">
+									<div class="onClickTextOverImage" style="background-image:url(https://i.pinimg.com/originals/52/6f/f9/526ff9538a53a9899a4976b260f51ce5.jpg)">
+										<span>Ten Shin Don</span>
+									</div> -->
+							</header>
+							
 							
 						</div>
 					</section>
@@ -206,7 +216,7 @@
 							<li><a href="mailto:yingke.zhao@sciencespo.fr" target="_blank"  class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; All rights reserved</li><li>Page design made with <a href="http://html5up.net" target="_blank" >HTML5 UP</a> </br>Header illustration made with vectors from <a href="https://www.vecteezy.com/" target="_blank">VECTEEZY</a></li>
+							<li class="left">&copy; All rights reserved</li><li class="right">Page design made with <a href="http://html5up.net" target="_blank" >HTML5 UP</a> </br>Header illustration made with vectors from <a href="https://www.vecteezy.com/" target="_blank">VECTEEZY</a></li>
 						</ul>
 					</footer>
 

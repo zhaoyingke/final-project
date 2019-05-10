@@ -14,8 +14,7 @@
 		$iframe = $('#iframe');
 		// responsive square img
 		var textOverImages = document.getElementsByClassName("onClickTextOverImage");
-		var previousTextOverImage;
-
+		var previousTextOverImage	
 	for (var i = 0; i < textOverImages.length; i++) {
 		textOverImages[i].onclick = function() {
 			var classes = this.classList;

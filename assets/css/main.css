@@ -2874,7 +2874,17 @@ canvas{
 			.wrapper.style1 header p {
 				color: #424B50;
 				font-family: 'Lora', serif;
-				font-size: 18px;
+				
+			}
+			.wrapper.style1 header p.caption {
+				font-size: 16px;
+				font-style: italic;
+				
+			}
+			.wrapper.style1 header p.source {
+				font-size: 10px;
+				font-style: italic;
+				font-weight: 400
 			}
 			.wrapper.style1 head.major p::selection{
 				color: #F3F8F2;
@@ -3818,7 +3828,9 @@ canvas{
 		body.is-preload #banner h2:before, body.is-preload #banner h2:after {
 			width: 0;
 		}
-
+	body.is-load.page-wrapper.header h1 {
+		font-family: 'Gugi', cursive;
+	}	
 	body.is-preload #banner .more {
 		-moz-transform: translateY(8.5em);
 		-webkit-transform: translateY(8.5em);
@@ -3999,6 +4011,15 @@ canvas{
 				line-height: 1em;
 				margin-left: 1em;
 				padding-left: 1em;
+			}
+
+			#footer .copyright li.left {
+				text-align: right;
+				margin: auto
+			}
+			#footer .copyright li.right {
+				text-align: left;
+				line-height: 150%
 			}
 
 				#footer .copyright li:first-child {
